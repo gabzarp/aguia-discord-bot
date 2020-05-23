@@ -8,8 +8,8 @@ const client = new Client();
 
 // Here we load the config.json file that contains our token and our prefix values. 
 const config = {
-  "token": process.env.discord_token,
-  "prefix" : "-eae"
+  "token": process.env.DISCORD_TOKEN,
+  "prefix" : process.env.PREFIX
 }
 // config.token contains the bot's token
 // config.prefix contains the message prefix.
