@@ -7,6 +7,10 @@ const {Client, RichEmbed} = require("discord.js");
 const client = new Client();
 
 // Here we load the config.json file that contains our token and our prefix values. 
+// const config = {
+//   "token": process.env.DISCORD_TOKEN,
+//   "prefix" : process.env.PREFIX
+// }
 const config = {
   "token": process.env.DISCORD_TOKEN,
   "prefix" : process.env.PREFIX
@@ -64,7 +68,7 @@ client.on("message", async message => {
     .addField("Nome maluco do minecraft","-eae minecraft")
     message.channel.send(embed);
   }
-  if (message.content.slice(config.prefix.length) == "minecraft") {
+  if (message.content.slice(config.prefix.length) == " minecraft") {
     var d = new Date();
     var t = d.getHours();
     var friendlyMessage;
