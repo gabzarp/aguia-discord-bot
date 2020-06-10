@@ -77,9 +77,9 @@ client.on("message", async message => {
     .setTitle("fala meu parça, primeiramente "+friendlyMessage +".")
     .setColor(0xf2aaff)
     .setDescription("Segundamente segue ai os comandos do minecraft:")
-    .addField("pra sacar seu mega nome maluco minecraft:","eae minecraft -name")
-    .addField("pra ver a lista dos primeiros nomes doidos:","eae minecraft -firstnames")
-    .addField("pra ver os sobrenomes wacky and cool.", "eae minecraft -lastnames")
+    .addField("pra sacar seu mega nome maluco minecraft:","-eae minecraft -name")
+    .addField("pra ver a lista dos primeiros nomes doidos:","-eae minecraft -firstnames")
+    .addField("pra ver os sobrenomes wacky and cool.", "-eae minecraft -lastnames")
     .addField(".", " Terceiramente tamo ai pensando em coisas mais sapecas para realizar ai com o bot graças a deus, talvez fazer a galera adicionar primeiros e segundos nomes. \n bot ta WIP ainda né fi cuidado a cabeça :construction_worker: :construction: ")
     message.channel.send(embed);
   }
