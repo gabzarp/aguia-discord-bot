@@ -1,6 +1,6 @@
 // Load up the discord.js library
 const {Client, RichEmbed} = require("discord.js");
-
+var schedule = require('node-schedule');
 // This is your client. Some people call it `bot`, some people call it `self`, 
 // some might call it `cootchie`. Either way, when you see `client.something`, or `bot.something`,
 // this is what we're refering to. Your client.
@@ -17,17 +17,47 @@ const config = {
 }
 // config.token contains the bot's token
 // config.prefix contains the message prefix.
+var firstName  = ["Creeper", "Steve", "Herobrine", "Esqueleto", "Enderdragon", "Ponte", "Deus Pedro", "Minerador"];
+var secondName = [" maluco", " do Aether", " do Nether", " zumbi", " gente fina", " rei do PVP", " da Monarkia", " da Venarkia"];
 
 client.on("ready", () => {
+  var aguiaChannel = client.channels.find(x => x.id === "358777401670369292");
+  var caueChannel = client.channels.find(x => x.id === "653803521333919747");
+  var aniversarios = [
+    {id: '274383007954108416', birthday: '24/1', channels: [caueChannel, aguiaChannel]},
+    {id: '126752073164259328', birthday: '27/2', channels: [caueChannel, aguiaChannel]},
+    {id: '271730195877068800', birthday: '2/4', channels: [caueChannel, aguiaChannel]},
+    {id: '352499565636878337', birthday: '20/5', channels: [caueChannel, aguiaChannel]},
+    {id: '126808261235048448', birthday: '30/5', channels: [caueChannel, aguiaChannel]},
+    {id: '693657846746841169', birthday: '14/6', channels: [caueChannel, aguiaChannel]},
+    {id: '126759478807756801', birthday: '19/6', channels: [caueChannel, aguiaChannel]},
+    {id: 'Gabi', birthday: '19/6', channels: [caueChannel, aguiaChannel]},
+    {id: '255746420219314177', birthday: '12/7', channels: [caueChannel, aguiaChannel]},
+    {id: '331188723901267969', birthday: '27/7', channels: [caueChannel, aguiaChannel]},
+    {id: '197381900074090496', birthday: '17/8', channels: [caueChannel, aguiaChannel]},
+    {id: '126752237882966018', birthday: '18/8', channels: [caueChannel, aguiaChannel]},
+    {id: '126874804920778752', birthday: '8/9', channels: [caueChannel, aguiaChannel]},
+    {id: '409819373730005012', birthday: '8/10', channels: [caueChannel, aguiaChannel]},
+    {id: '126751561966682112', birthday: '9/10', channels: [caueChannel, aguiaChannel]},
+    {id: '315543395688906755', birthday: '5/11', channels: [caueChannel, aguiaChannel]},
+    {id: '258789944926011393', birthday: '26/12', channels: [caueChannel, aguiaChannel]},
+  ];
   // This event will run if the bot starts, and logs in, successfully.
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
   // Example of changing the bot's playing game to something useful. `client.user` is what the
   // docs refer to as the "ClientUser".
   client.user.setActivity(`-eae`);
+
+  aniversarios.forEach(bd => {
+    var date = bd.birthday.split('/');
+    bd.channels.forEach(channel => {
+      schedule.scheduleJob("1 0 " + date[0] + " " +  date[1] + " *", ()=>{
+        channel.send('FELIZ ANIVERSÁRIO <@' + bd.id+ '> :tada:')
+      });  
+    });
+  });
 });
 
-var firstName  = ["Creeper", "Steve", "Herobrine", "Esqueleto", "Enderdragon", "Ponte", "Deus Pedro", "Minerador"];
-var secondName = [" maluco", " do Aether", " do Nether", " zumbi", " gente fina", " rei do PVP", " da Monarkia", " da Venarkia"];
 
 client.on("message", async message => {
   // This event will run on every single message received, from any channel or DM.
@@ -92,6 +122,9 @@ client.on("message", async message => {
   }
   if (message.content.includes("minecraft -lastnames")) {
     message.channel.send( secondName.toString());
+  }
+  if(message.content.includes("aniversarios")){
+    message.channel.send(aniversarios)
   }
 });
 
