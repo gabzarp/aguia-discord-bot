@@ -22,7 +22,7 @@ var secondName = [" maluco", " do Aether", " do Nether", " zumbi", " gente fina"
 
 client.on("ready", () => {
   var aguiaChannel = client.channels.find(x => x.id === "358777401670369292");
-  var caueChannel = client.channels.find(x => x.id === "653803521333919747");
+  var caueChannel = client.channels.find(x => x.id === "709786159995420769");
   var dealerChannel = client.channels.find(x => x.id === "689807693887701131");
   var aniversarios = [
     //feiju
