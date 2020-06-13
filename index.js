@@ -23,24 +23,46 @@ var secondName = [" maluco", " do Aether", " do Nether", " zumbi", " gente fina"
 client.on("ready", () => {
   var aguiaChannel = client.channels.find(x => x.id === "358777401670369292");
   var caueChannel = client.channels.find(x => x.id === "653803521333919747");
+  var dealerChannel = client.channels.find(x => x.id === "689807693887701131");
   var aniversarios = [
+    //feiju
     {id: '274383007954108416', birthday: '24/1', channels: [caueChannel, aguiaChannel]},
+    //mateus
     {id: '126752073164259328', birthday: '27/2', channels: [caueChannel, aguiaChannel]},
+    //caue
     {id: '271730195877068800', birthday: '2/4', channels: [caueChannel, aguiaChannel]},
+    //brunão
     {id: '352499565636878337', birthday: '20/5', channels: [caueChannel, aguiaChannel]},
+    //alvaro
     {id: '126808261235048448', birthday: '30/5', channels: [caueChannel, aguiaChannel]},
+    //vallen
     {id: '693657846746841169', birthday: '14/6', channels: [caueChannel, aguiaChannel]},
+    //neno
     {id: '126759478807756801', birthday: '19/6', channels: [caueChannel, aguiaChannel]},
-    {id: 'Gabi', birthday: '19/6', channels: [caueChannel, aguiaChannel]},
+    //gabi
+    {id: 'Gabi',               birthday: '19/6', channels: [caueChannel, aguiaChannel]},
+    //luiza
     {id: '255746420219314177', birthday: '12/7', channels: [caueChannel, aguiaChannel]},
+    //oniquiz
     {id: '331188723901267969', birthday: '27/7', channels: [caueChannel, aguiaChannel]},
+    //yoshi
     {id: '197381900074090496', birthday: '17/8', channels: [caueChannel, aguiaChannel]},
+    //boia
     {id: '126752237882966018', birthday: '18/8', channels: [caueChannel, aguiaChannel]},
+    //bruluiz
     {id: '126874804920778752', birthday: '8/9', channels: [caueChannel, aguiaChannel]},
+    //callegas
     {id: '409819373730005012', birthday: '8/10', channels: [caueChannel, aguiaChannel]},
+    //eu
     {id: '126751561966682112', birthday: '9/10', channels: [caueChannel, aguiaChannel]},
+    //yuuki
     {id: '315543395688906755', birthday: '5/11', channels: [caueChannel, aguiaChannel]},
+    //nath akemi
     {id: '258789944926011393', birthday: '26/12', channels: [caueChannel, aguiaChannel]},
+    //tety 
+    {id: '689833866147528712', birthday: '15/6', channels: [dealerChannel]},
+    //edu
+    {id: '528576882820775947', birthday: '19/9', channels: [dealerChannel]},
   ];
   // This event will run if the bot starts, and logs in, successfully.
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
