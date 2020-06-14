@@ -73,7 +73,7 @@ client.on("ready", () => {
   aniversarios.forEach(bd => {
     var date = bd.birthday.split('/');
     bd.channels.forEach(channel => {
-      schedule.scheduleJob("1 0 " + date[0] + " " +  date[1] + " *", ()=>{
+      schedule.scheduleJob("1 3 " + date[0] + " " +  date[1] + " *", ()=>{
         channel.send('FELIZ ANIVERSÁRIO <@' + bd.id+ '> :tada:')
       });  
     });
