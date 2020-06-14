@@ -27,6 +27,8 @@ client.on("ready", () => {
   var aniversarios = [
     //feiju
     {id: '274383007954108416', birthday: '24/1', channels: [caueChannel, aguiaChannel]},
+    //bigode
+    {id: '141387809800847360', birthday: '13/1', channels: [aguiaChannel]},
     //mateus
     {id: '126752073164259328', birthday: '27/2', channels: [caueChannel, aguiaChannel]},
     //caue
