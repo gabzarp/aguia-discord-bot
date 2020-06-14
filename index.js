@@ -63,6 +63,8 @@ client.on("ready", () => {
     {id: '689833866147528712', birthday: '15/6', channels: [dealerChannel]},
     //edu
     {id: '528576882820775947', birthday: '19/9', channels: [dealerChannel]},
+    //nico
+    {id: '676805610335109152', birthday: '11/3', channels: [dealerChannel]},
   ];
   // This event will run if the bot starts, and logs in, successfully.
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
