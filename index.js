@@ -62,7 +62,7 @@ client.on("ready", () => {
     //nath akemi
     {id: '258789944926011393', birthday: '26/12', channels: [caueChannel, aguiaChannel]},
     //tety 
-    {id: '689833866147528712', birthday: '15/6', channels: [dealerChannel]},
+    {id: '689833866147528712', birthday: '22/1', channels: [dealerChannel]},
     //edu
     {id: '528576882820775947', birthday: '19/9', channels: [dealerChannel]},
     //nico
