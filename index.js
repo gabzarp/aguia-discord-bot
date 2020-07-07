@@ -18,7 +18,7 @@ const config = {
 // config.token contains the bot's token
 // config.prefix contains the message prefix.
 var firstName  = ["Creeper", "Steve", "Herobrine", "Esqueleto", "Enderdragon", "Ponte", "Deus Pedro", "Minerador"];
-var secondName = [" maluco", " do Aether", " do Nether", " zumbi", " gente fina", " rei do PVP", " da Monarkia", " da Venarkia"];
+var secondName = [" maluco", " do Aether", " do Nether", " zumbi", " gente fina", " rei do PVP", " da Monarkia", " da Venarkia", " de redstone automático"];
 
 client.on("ready", () => {
   var aguiaChannel = client.channels.find(x => x.id === "358777401670369292");
